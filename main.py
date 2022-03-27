@@ -3,4 +3,4 @@ from battleships import Battleships
 
 if __name__ == "__main__":
     game =  Battleships.Battleships()
-    game.run()
+    game.run(cheat=False)

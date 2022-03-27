@@ -123,7 +123,7 @@ class Battleships:
     def __instruction(self):
         print(f"{self.__fillCellColor(CellType.COLD.value)} -> enemies are not detected nearby")
         print(f"{self.__fillCellColor(CellType.WARM.value)} -> enemies are 2 to 4 cells away")
-        print(f"{self.__fillCellColor(CellType.HOT.value)} -> enemies are 2 to 4 cells away")
+        print(f"{self.__fillCellColor(CellType.HOT.value)} -> enemies are 1 to 2 cells away")
         print(f"{self.__fillCellColor(CellType.ENEMY.value)} -> You have hit the enemy")
         print()
 
