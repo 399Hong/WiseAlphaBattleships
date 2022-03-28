@@ -3,7 +3,6 @@ from enum import Enum
 from colorama import Back,Fore
 from os import system, name
 
-
 class CellType(Enum):
 
     HIDDEN = 1
@@ -25,10 +24,8 @@ class Battleships:
         
         self.__generateEnemies(enemyNum = enemyNum)
         self.__playBoard = [ [1] * size for i in range(size) ]
-        #board for game play info
-        
+        #board for game play info      
 
-       
     def run(self, cheat:bool = True):
         for i in range(self.__maxAttempts):
             # clear terminal 
@@ -58,9 +55,7 @@ class Battleships:
                 return 
         print(Fore.RED+"You LOST")
         return
-            
-            
-
+                      
 
     def __calculateDistanceEnemyTarget(self, targetX:int, targetY:int) -> tuple:
         outcome = []
@@ -94,8 +89,8 @@ class Battleships:
     def __getTarget(self) -> tuple:
         while True:
             try:
-                x = int(input("Please enter the x-coordinate: "))
-                y = int(input("Please enter the y-coordinate: "))
+                x = int(input("Please enter the row coordinate: "))
+                y = int(input("Please enter the column coordinate: "))
                 # check for valid x y value
                 if (x >= 0 and x < self.__size and y >= 0 and y <self.__size) :
                     return (x,y)
@@ -152,7 +147,3 @@ class Battleships:
             print("|")
             print(boardBoundary)
    
-
-    
-
-
