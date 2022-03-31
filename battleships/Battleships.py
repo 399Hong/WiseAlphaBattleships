@@ -14,6 +14,7 @@ class CellType(Enum):
 
 class Battleships:
     def __init__(self, size: int = 8, maxAttempts : int  = 20, enemyNum:int = 2 ):
+        
         self.__size = size 
         self.__maxAttempts = maxAttempts # maximum number of plays
         # self.__boardStyle = "*" # board look and feel
@@ -24,6 +25,7 @@ class Battleships:
         #board for game play info      
 
     def run(self, cheat:bool = True):
+
         for i in range(self.__maxAttempts):
             # clear terminal 
             if name == 'nt':
